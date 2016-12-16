@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*<!--子元素中有float，父元素中也加float可以清楚子元素对父元素的影响-->*/
+        .box {
+            float: left;
+            background: red;
+        }
+
+        .left {
+            float: left;
+            background: blue;
+            margin-right: 76px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .img {
+            background: yellow;
+            height: 100px;
+            width: 76px;
+            float: left;
+            margin-left: -76px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="left"></div>
+    <div class="img"></div>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>
