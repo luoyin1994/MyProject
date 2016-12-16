@@ -1,0 +1,49 @@
+.a_background_top {
+    width: 1441px;
+    height: 645px;
+    background-image: url("images/background/a_background_top.png");
+    /*background-size: 1441px 645px  ;*/
+}
+
+#boy {
+
+}
+
+/*小男孩运动*/
+.charector {
+    width: 151px;
+    height: 291px;
+    background: url("images/原图/person/boy-walk.png") 0 0;
+    position: absolute;
+    left: -10%;
+    top: 55%;/*改变小人位置*/
+    animation: walkSta 1s steps(1, start) infinite, walkTo 15s linear;/*steps？*/
+}
+
+@keyframes walkSta {
+    0% {
+        background: url("images/原图/person/boy-walk.png") 0 0;
+    }
+    25% {
+        background: url("images/原图/person/boy-walk.png") 151px 0;
+    }
+    50% {
+        background: url("images/原图/person/boy-walk.png") 302px 0;
+    }
+    75% {
+        background: url("images/原图/person/boy-walk.png") 453px 0;
+    }
+    100% {
+        background: url("images/原图/person/boy-walk.png") 604px 0;
+    }
+
+}
+
+@keyframes walkTo {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 100%;
+    }
+}
