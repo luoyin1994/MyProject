@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列等高布局之border</title>
+    <!--等高的实现为撑开了wrap的高度，wrap一半为border，一半为内容，实现两部分-->
+    <style>
+        * {
+            margin: 0; /*p标签会有默认margin值*/
+            padding: 0;
+        }
+
+        .wrap {
+            width: 200px;
+            color: cornflowerblue;/*color为border的颜色，也就是左边栏的颜色*/
+            background: red;/*background背景为右边栏的颜色*/
+            border-left: 200px solid;
+            font-size: 0;
+        }
+
+        .wrap > * {
+            display: inline-block;
+
+            line-height: 50px;
+            font-size: 16px;
+        }
+
+        .left {
+            width: 100%;
+            float: left; /*float不多余，没有会导致right和最下边的left对齐，上边空白*/
+            margin-left: -100%; /*marign会改变占位*//*margin的参考值是父元素？*/
+            color: black;
+        }
+
+        .right {
+            color: black;
+        }
+
+        .clearfix {
+            clear: both;
+            *zoom: 1;
+        }
+
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: '';
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<!--等高的实现为撑开了wrap的高度，wrap一半为border，一半为内容，实现两部分-->
+<div class="wrap clearfix" >
+    <div class="left">
+        <p>left1</p>
+        <p>left1</p>
+    </div>
+    <div class="right">
+        <p>right1</p>
+        <p>right1</p>
+    </div>
+</div>
+</body>
+</html>
